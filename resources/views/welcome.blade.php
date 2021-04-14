@@ -1,8 +1,13 @@
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
+        <!-- Required meta tags -->
         <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+          <!-- Favicon -->
+        <link rel="shortcut icon" href="{{ asset('images/icons/favicon.png') }}">
+        <link rel="icon" href="{{ asset('images/icons/favicon.png') }}" type="image/x-icon">
 
         <title>Trendist Consulting</title>
 
@@ -48,7 +53,7 @@
 
       .content {
         text-align: center;
-        padding-top:15%;
+        padding-top:18%;
       }
 
       .title {
@@ -92,23 +97,39 @@
         margin-bottom: 30px;
       }
 
+      @media  only screen and (max-width: 768px) {
+
+    .container
+        {
+            padding: 0;
+        }
+        body{
+			margin-top: 60%!important;
+		}
+    }
+
               </style>
 
     </head>
     <body >
 
-        <div class="content">
+        <div class="content container">
             <div class="title m-b-md">
                 <img src="{{ asset('images/trendist-consulting-logo.png') }}" style="width:350px;" class=" text-center">
             </div>
             <div class="flex-center position-ref">
+
          @if (Route::has('login'))
             <div class="center-center links">
                 @auth
                    @if (Auth::user()->is_admin=='1')
-                      <a href="{{ url('/home') }}" class="btn btn-primary">Home</a>
+                      {{-- <a href="{{ url('/home') }}" class="btn btn-primary">Home</a> --}}
+                     <a href="{{ url('admin/dashboard') }}" class="btn btn-primary">Dashboard</a>
+
                    @else
-                     <a href="{{ url('admin/home') }}" class="btn btn-primary">Dashboard</a>
+                     {{-- <a href="{{ url('admin/home') }}" class="btn btn-primary">Dashboard</a> --}}
+                     <a href="{{ url('promoters/dashboard') }}" class="btn btn-primary">Home</a>
+
                    @endif
 
                 @else

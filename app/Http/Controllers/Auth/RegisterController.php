@@ -2,17 +2,20 @@
 
 namespace App\Http\Controllers\Auth;
 
-
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\Controller;
 use App\Providers\RouteServiceProvider;
 use App\Models\User;
+use App\Models\Store;
+use App\Notifications\UserNotification;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Http\Request;
 use Illuminate\Auth\Events\Registered;
 use Illuminate\Http\JsonResponse;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Notification;
 
 class RegisterController extends Controller
 {
@@ -35,7 +38,7 @@ class RegisterController extends Controller
      * @var string
      */
    protected $redirectTo = RouteServiceProvider::HOME;
-
+    // proctected $redirectTo =
     /**
      * Create a new controller instance.
      *
@@ -62,6 +65,7 @@ class RegisterController extends Controller
         return Validator::make($data, [
             'name' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
+            'store' => ['required', 'string', 'max:255'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
         ]);
     }
@@ -77,35 +81,43 @@ class RegisterController extends Controller
         return User::create([
             'name' => $data['name'],
             'email' => $data['email'],
+            'store' => $data['store'],
+            // 'password' => $data['password'],
             'password' => Hash::make($data['password']),
         ]);
     }
 
     protected function guard()
     {
-        // return Auth::guard();
+        return Auth::guard();
     }
 
     public function register(Request $request)
     {
+        $user = User::all();
         $this->validator($request->all())->validate();
 
         event(new Registered($user = $this->create($request->all())));
 
-        $this->guard()->login($user);
+        // Notification::send($user, new UserNotification($request->name));
 
-        if ($response = $this->registered($request, $user)) {
-            return $response;
-        }
+        return redirect()->back()->with('success','Promoter Register Successfully.');
 
-        return $request->wantsJson()
-                    ? new JsonResponse([], 201)
-                    : redirect($this->redirectPath());
+        // $this->guard()->login($user);
+
+        // if ($response = $this->registered($request, $user)) {
+        //     return $response;
+        // }
+
+        // return $request->wantsJson()
+        //             ? new JsonResponse([], 201)
+        //             : redirect($this->redirectPath());
     }
 
     public function showRegistrationForm()
     {
-        return view('auth.register');
+        $stores = DB::select('select * from stores');
+        return view('auth.register',['stores'=>$stores]);
     }
 
     public function redirectPath()

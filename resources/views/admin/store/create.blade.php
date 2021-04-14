@@ -28,6 +28,11 @@
                 {{-- <p class="mb-25">More complex forms can be built using the grid classes. Use these for form layouts that require multiple columns, varied widths, and additional alignment options.</p> --}}
                 <div class="row">
                     <div class="col-sm">
+                        @if (session('success'))
+                            <div class="alert alert-success">
+                                {{ session('success') }}
+                            </div>
+                        @endif
                         <form action="{{ route('store.create') }}" method="post">
                             @csrf
                             <div class="form-group">

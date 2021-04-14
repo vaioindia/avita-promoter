@@ -8,11 +8,17 @@
 
     <div class="row justify-content-center">
         <div class="col-md-12">
+            @if (session('email'))
+                <div class="alert alert-danger">
+                    {{ session('email') }}
+                </div>
+            @endif
 
             <form class="login100-form validate-form" method="POST" action="{{ route('login') }}">
                 @csrf
 					<span class="login100-form-logo">
-						<i class="zmdi zmdi-landscape"></i>
+						{{-- <i class="zmdi zmdi-landscape"></i> --}}
+                        <img src="{{ asset('images/trendist-consulting-logo.png') }}" style="" class="w-75">
 					</span>
 
 					<span class="login100-form-title p-b-34 p-t-27">
@@ -24,10 +30,10 @@
                         {{-- <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus> --}}
 
 						@error('email')
-                                    <span class="focus-input100" role="alert" data-placeholder="&#xf207;">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
+                            <span class="focus-input100" role="alert" data-placeholder="&#xf207;">
+                                <strong>{{ $message }}</strong>
+                            </span>
+                        @enderror
                         <span class="focus-input100" data-placeholder="&#xf207;"></span>
 					</div>
 

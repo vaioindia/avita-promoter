@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>Prometer Dashboard</title>
+    <meta name="description" content="A responsive bootstrap 4 admin dashboard template by hencework" />
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="http://127.0.0.1:8000/images/icons/favicon.png">
+    <link rel="icon" href="http://127.0.0.1:8000/images/icons/favicon.png" type="image/x-icon">
+
+    <!-- Bootstrap Dropzone CSS -->
+	<link href="http://127.0.0.1:8000/assets/vendors/dropzone/dist/dropzone.css" rel="stylesheet" type="text/css"/>
+
+	<!-- Bootstrap Dropzone CSS -->
+	<link href="http://127.0.0.1:8000/assets/vendors/dropify/dist/css/dropify.min.css" rel="stylesheet" type="text/css"/>
+
+    <!-- Toggles CSS -->
+    <link href="http://127.0.0.1:8000/assets/vendors/jquery-toggles/css/toggles.css" rel="stylesheet" type="text/css">
+    <link href="http://127.0.0.1:8000/assets/vendors/jquery-toggles/css/themes/toggles-light.css" rel="stylesheet" type="text/css">
+
+	<!-- Toastr CSS -->
+    <link href="http://127.0.0.1:8000/assets/vendors/jquery-toast-plugin/dist/jquery.toast.min.css" rel="stylesheet" type="text/css">
+
+    <!-- Custom CSS -->
+    <link href="http://127.0.0.1:8000/assets/dist/css/style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+    <!-- Preloader -->
+    
+    <!-- /Preloader -->
+
+	<!-- HK Wrapper -->
+	<div class="hk-wrapper hk-vertical-nav">
+
+        <!-- Top Navbar -->
+        <nav class="navbar navbar-expand-xl navbar-light fixed-top hk-navbar">
+            <a id="navbar_toggle_btn" class="navbar-toggle-btn nav-link-hover" href="javascript:void(0);"><span class="feather-icon"><i data-feather="menu"></i></span></a>
+            <a class="navbar-brand" href="">
+                <img class="brand-img d-inline-block" src="http://127.0.0.1:8000/assets/dist/img/trendist-consulting-logo.png" alt="brand" />
+            </a>
+            <ul class="navbar-nav hk-navbar-content">
+
+                <li class="nav-item dropdown dropdown-notifications">
+                    <a class="nav-link dropdown-toggle no-caret" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="feather-icon"><i data-feather="bell"></i></span><span class="badge-wrap"><span class="badge badge-primary badge-indicator badge-indicator-sm badge-pill pulse"></span></span></a>
+                    <div class="dropdown-menu dropdown-menu-right" data-dropdown-in="fadeIn" data-dropdown-out="fadeOut">
+                        <h6 class="dropdown-header">Notifications <a href="http://127.0.0.1:8000/promoters/notification" class="">View All</a></h6>
+                        <div class="notifications-nicescroll-bar">
+                                                        <a href="http://127.0.0.1:8000/promoters/notification/3" class="dropdown-item">
+                                <div class="media">
+                                    <div class="media-img-wrap">
+                                        <div class="avatar avatar-sm">
+                                            <img src="http://127.0.0.1:8000/images/icons/favicon.png" alt="user" class="avatar-img rounded-circle">
+                                        </div>
+                                    </div>
+                                    <div class="media-body">
+                                        <div>
+                                            <div class="notifications-text">
+                                                <span class="text-dark text-capitalize">
+                                                    Test
+                                                </span><br>
+                                                There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don&#039;t look even slightly believable.
+                                            </div>
+                                            <div class="notifications-time">12m</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                                                        <a href="http://127.0.0.1:8000/promoters/notification/4" class="dropdown-item">
+                                <div class="media">
+                                    <div class="media-img-wrap">
+                                        <div class="avatar avatar-sm">
+                                            <img src="http://127.0.0.1:8000/images/icons/favicon.png" alt="user" class="avatar-img rounded-circle">
+                                        </div>
+                                    </div>
+                                    <div class="media-body">
+                                        <div>
+                                            <div class="notifications-text">
+                                                <span class="text-dark text-capitalize">
+                                                    Test 2
+                                                </span><br>
+                                                Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source.
+                                            </div>
+                                            <div class="notifications-time">12m</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                                                        <a href="http://127.0.0.1:8000/promoters/notification/5" class="dropdown-item">
+                                <div class="media">
+                                    <div class="media-img-wrap">
+                                        <div class="avatar avatar-sm">
+                                            <img src="http://127.0.0.1:8000/images/icons/favicon.png" alt="user" class="avatar-img rounded-circle">
+                                        </div>
+                                    </div>
+                                    <div class="media-body">
+                                        <div>
+                                            <div class="notifications-text">
+                                                <span class="text-dark text-capitalize">
+                                                    Test 3
+                                                </span><br>
+                                                Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source.
+                                            </div>
+                                            <div class="notifications-time">12m</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                                                        <div class="dropdown-divider"></div>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="nav-item dropdown dropdown-authentication">
+                    <a class="nav-link dropdown-toggle no-caret" href="" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <div class="media">
+                            <div class="media-img-wrap">
+                                <div class="avatar">
+                                    <img src="http://127.0.0.1:8000/images/icons/favicon.png" alt="Promoters" class="avatar-img">
+                                </div>
+                                
+                            </div>
+                            <div class="media-body">
+                                <span>User<i class="zmdi zmdi-chevron-down"></i></span>
+                            </div>
+                        </div>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-right" data-dropdown-in="flipInX" data-dropdown-out="flipOutX">
+                        <form id="logout-form" action="http://127.0.0.1:8000/logout" method="POST" class="">
+                            <input type="hidden" name="_token" value="VEqfIKMaJfLqHRDqFb7X6uZDOeKQVpDiPsAfEEvJ">                            <button class="dropdown-item" type="submit" href="http://127.0.0.1:8000/logout"><i class="dropdown-icon zmdi zmdi-power"></i><span>Log out</span></button>
+                            
+                        </form>
+                        
+                    </div>
+                </li>
+            </ul>
+        </nav>
+        <!-- /Top Navbar -->
+
+        <!-- Vertical Nav -->
+        <!-- Vertical Nav -->
+<nav class="hk-nav hk-nav-dark">
+    <a href="javascript:void(0);" id="hk_nav_close" class="hk-nav-close"><span class="feather-icon"><i data-feather="x"></i></span></a>
+    <div class="nicescroll-bar">
+        <div class="navbar-nav-wrap">
+            <ul class="navbar-nav flex-column">
+                <li class="nav-item active">
+                    <a class="nav-link" href="http://127.0.0.1:8000/promoters/dashboard">
+                        <span class="feather-icon"><i data-feather="activity"></i></span>
+                        <span class="nav-link-text">Dashboard</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link link-with-badge" href="http://127.0.0.1:8000/promoter/stock-report">
+                        <span class="feather-icon"><i data-feather="package"></i></span>
+                        <span class="nav-link-text">Stock Report</span>
+                    </a>
+                </li>
+            </ul>
+            <ul class="navbar-nav flex-column">
+                <li class="nav-item">
+                    <a class="nav-link" href="http://127.0.0.1:8000/promoter/create">
+                        <span class="feather-icon"><i data-feather="book"></i></span>
+                        <span class="nav-link-text">Document</span>
+                    </a>
+                </li>
+                
+            </ul>
+        
+    </div>
+</nav>
+<div id="hk_nav_backdrop" class="hk-nav-backdrop"></div>
+<!-- /Vertical Nav -->
+        <!-- /Vertical Nav -->
+
+        <!-- Setting Panel -->
+        <div class="hk-settings-panel">
+            <div class="nicescroll-bar position-relative">
+                <div class="settings-panel-wrap">
+                    <div class="settings-panel-head">
+                        <img class="brand-img d-inline-block align-top" src="http://127.0.0.1:8000/assets/dist/img/logo-light.png" alt="brand" />
+                        <a href="javascript:void(0);" id="settings_panel_close" class="settings-panel-close"><span class="feather-icon"><i data-feather="x"></i></span></a>
+                    </div>
+                    <hr>
+                    <h6 class="mb-5">Layout</h6>
+                    <p class="font-14">Choose your preferred layout</p>
+                    <div class="layout-img-wrap">
+                        <div class="row">
+                            <a href="dashboard1.html" class="col-6 mb-30">
+                                <img class="rounded opacity-70" src="http://127.0.0.1:8000/assets/dist/img/layout1.png" alt="layout">
+                                <i class="zmdi zmdi-check"></i>
+                            </a>
+                            <a href="dashboard2.html" class="col-6 mb-30">
+                                <img class="rounded opacity-70" src="http://127.0.0.1:8000/assets/dist/img/layout2.png" alt="layout">
+                                <i class="zmdi zmdi-check"></i>
+                            </a>
+                           <a href="dashboard3.html" class="col-6 mb-30">
+                                <img class="rounded opacity-70" src="http://127.0.0.1:8000/assets/dist/img/layout3.png" alt="layout">
+                                <i class="zmdi zmdi-check"></i>
+                            </a>
+							<a href="javascript:void(0);" class="col-6 mb-30 active">
+                                <img class="rounded opacity-70" src="http://127.0.0.1:8000/assets/dist/img/layout4.png" alt="layout">
+                                <i class="zmdi zmdi-check"></i>
+                            </a>
+							<a href="dashboard5.html" class="col-6">
+                                <img class="rounded opacity-70" src="http://127.0.0.1:8000/assets/dist/img/layout5.png" alt="layout">
+                                <i class="zmdi zmdi-check"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <hr>
+                    <h6 class="mb-5">Navigation</h6>
+                    <p class="font-14">Menu comes in two modes: dark & light</p>
+                    <div class="button-list hk-nav-select mb-10">
+                        <button type="button" id="nav_light_select" class="btn btn-outline-light btn-sm btn-wth-icon icon-wthot-bg"><span class="icon-label"><i class="fa fa-sun-o"></i> </span><span class="btn-text">Light Mode</span></button>
+                        <button type="button" id="nav_dark_select" class="btn btn-outline-primary btn-sm btn-wth-icon icon-wthot-bg"><span class="icon-label"><i class="fa fa-moon-o"></i> </span><span class="btn-text">Dark Mode</span></button>
+                    </div>
+                    <hr>
+                    <h6 class="mb-5">Top Nav</h6>
+                    <p class="font-14">Choose your liked color mode</p>
+                    <div class="button-list hk-navbar-select mb-10">
+                        <button type="button" id="navtop_light_select" class="btn btn-outline-primary btn-sm btn-wth-icon icon-wthot-bg"><span class="icon-label"><i class="fa fa-sun-o"></i> </span><span class="btn-text">Light Mode</span></button>
+                        <button type="button" id="navtop_dark_select" class="btn btn-outline-light btn-sm btn-wth-icon icon-wthot-bg"><span class="icon-label"><i class="fa fa-moon-o"></i> </span><span class="btn-text">Dark Mode</span></button>
+                    </div>
+                    <hr>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <h6>Scrollable Header</h6>
+                        <div class="toggle toggle-sm toggle-simple toggle-light toggle-bg-primary scroll-nav-switch"></div>
+                    </div>
+                    <button id="reset_settings" class="btn btn-primary btn-block btn-reset mt-30">Reset</button>
+                </div>
+            </div>
+            <img class="d-none" src="http://127.0.0.1:8000/assets/dist/img/logo-light.png" alt="brand" />
+            <img class="d-none" src="http://127.0.0.1:8000/assets/dist/img/logo-dark.png" alt="brand" />
+        </div>
+        <!-- /Setting Panel -->
+
+        <!-- Main Content -->
+        <div class="hk-pg-wrapper">
+			<!-- Container -->
+            
+
+<!-- Breadcrumb -->
+<nav class="hk-breadcrumb" aria-label="breadcrumb">
+    <ol class="breadcrumb breadcrumb-light bg-transparent">
+        <li class="breadcrumb-item"><a href="#">Noitification</a></li>
+        
+    </ol>
+</nav>
+<!-- /Breadcrumb -->
+
+<!-- Container -->
+<div class="container">
+    <!-- Title -->
+    <div class="hk-pg-header">
+        <h4 class="hk-pg-title"><span class="pg-title-icon"><i class="fa fa-bell"></i></span>Noitification</h4>
+    </div>
+    <!-- /Title -->
+
+    <!-- Row -->
+    <div class="row">
+        <div class="col-xl-12">
+            <section class="hk-sec-wrapper">
+
+                <h5 class="hk-sec-title">Noitification</h5>
+                
+                <div class="dropdown-divider"></div>
+
+                <div  class="row">
+                    <div class="col-sm"><br>
+                        <h5 class="hk-sec-title">Titlle:Test 3</h5>
+                        <blockquote class="blockquote"><p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source.</p></blockquote>
+                                                <a href="" target="_blank" class="btn btn-outline-primary" download="Trendist Consulting Dashboard.pdf">Download</a>
+                        
+                        <div class="dropdown-divider"></div>
+                </div>
+            </section>
+        </div>
+    </div>
+    <!-- /Row -->
+</div>
+<!-- /Container -->
+
+
+            <!-- /Container -->
+
+            <!-- Footer -->
+            <div class="hk-footer-wrap container">
+                <footer class="footer">
+                    <div class="row">
+                        <div class="col-md-6 col-sm-12">
+                            <p>Pampered by<a href="" class="text-dark" target="_blank">Trendist Consulting</a> © 2021</p>
+                        </div>
+                        <div class="col-md-6 col-sm-12">
+                            <p class="d-inline-block">Follow us</p>
+                            <a href="#" class="d-inline-block btn btn-icon btn-icon-only btn-indigo btn-icon-style-4"><span class="btn-icon-wrap"><i class="fa fa-facebook"></i></span></a>
+                            <a href="#" class="d-inline-block btn btn-icon btn-icon-only btn-indigo btn-icon-style-4"><span class="btn-icon-wrap"><i class="fa fa-twitter"></i></span></a>
+                            <a href="#" class="d-inline-block btn btn-icon btn-icon-only btn-indigo btn-icon-style-4"><span class="btn-icon-wrap"><i class="fa fa-google-plus"></i></span></a>
+                        </div>
+                    </div>
+                </footer>
+            </div>
+            <!-- /Footer -->
+        </div>
+        <!-- /Main Content -->
+
+    </div>
+    <!-- /HK Wrapper -->
+
+    <!-- jQuery -->
+    
+
+    <script type="text/javascript" defer src="http://127.0.0.1:8000/assets/vendors/jquery/dist/jquery.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script type="text/javascript" defer src="http://127.0.0.1:8000/assets/vendors/popper.js/dist/umd/popper.min.js"></script>
+    <script type="text/javascript" defer src="http://127.0.0.1:8000/assets/vendors/bootstrap/dist/js/bootstrap.min.js"></script>
+
+    <!-- Slimscroll JavaScript -->
+    <script type="text/javascript" defer src="http://127.0.0.1:8000/assets/dist/js/jquery.slimscroll.js"></script>
+
+    <!-- Data Table JavaScript -->
+    <script type="text/javascript" defer src="http://127.0.0.1:8000/assets/vendors/datatables.net/js/jquery.dataTables.min.js"></script>
+    <script type="text/javascript" defer src="http://127.0.0.1:8000/assets/vendors/datatables.net-bs4/js/dataTables.bootstrap4.min.js"></script>
+    <script type="text/javascript" defer src="http://127.0.0.1:8000/assets/vendors/datatables.net-dt/js/dataTables.dataTables.min.js"></script>
+    <script type="text/javascript" defer src="http://127.0.0.1:8000/assets/vendors/datatables.net-buttons/js/dataTables.buttons.min.js"></script>
+    <script type="text/javascript" defer src="http://127.0.0.1:8000/assets/vendors/datatables.net-buttons-bs4/js/buttons.bootstrap4.min.js"></script>
+    <script type="text/javascript" defer src="http://127.0.0.1:8000/assets/vendors/datatables.net-buttons/js/buttons.flash.min.js"></script>
+    <script type="text/javascript" defer src="http://127.0.0.1:8000/assets/vendors/jszip/dist/jszip.min.js"></script>
+    <script type="text/javascript" defer src="http://127.0.0.1:8000/assets/vendors/pdfmake/build/pdfmake.min.js"></script>
+    <script type="text/javascript" defer src="http://127.0.0.1:8000/assets/vendors/pdfmake/build/vfs_fonts.js"></script>
+    <script type="text/javascript" defer src="http://127.0.0.1:8000/assets/vendors/datatables.net-buttons/js/buttons.html5.min.js"></script>
+    <script type="text/javascript" defer src="http://127.0.0.1:8000/assets/vendors/datatables.net-buttons/js/buttons.print.min.js"></script>
+    <script type="text/javascript" defer src="http://127.0.0.1:8000/assets/vendors/datatables.net-responsive/js/dataTables.responsive.min.js"></script>
+    <script type="text/javascript" defer src="http://127.0.0.1:8000/assets/dist/js/dataTables-data.js"></script>
+
+    <!-- Dropzone JavaScript -->
+	<script type="text/javascript" defer src="http://127.0.0.1:8000/assets/vendors/dropzone/dist/dropzone.js"></script>
+
+	<!-- Dropify JavaScript -->
+	<script type="text/javascript" defer src="http://127.0.0.1:8000/assets/vendors/dropify/dist/js/dropify.min.js"></script>
+
+	<!-- Form Flie Upload Data JavaScript -->
+	<script type="text/javascript" defer src="http://127.0.0.1:8000/assets/dist/js/form-file-upload-data.js"></script>
+
+    <!-- Fancy Dropdown JS -->
+    <script type="text/javascript" defer src="http://127.0.0.1:8000/assets/dist/js/dropdown-bootstrap-extended.js"></script>
+
+    <!-- FeatherIcons JavaScript -->
+    <script type="text/javascript" defer src="http://127.0.0.1:8000/assets/dist/js/feather.min.js"></script>
+
+    <!-- Toggles JavaScript -->
+    <script type="text/javascript" defer src="http://127.0.0.1:8000/assets/vendors/jquery-toggles/toggles.min.js"></script>
+    <script type="text/javascript" defer src="http://127.0.0.1:8000/assets/dist/js/toggle-data.js"></script>
+
+	<!-- Counter Animation JavaScript -->
+	<script type="text/javascript" defer src="http://127.0.0.1:8000/assets/vendors/waypoints/lib/jquery.waypoints.min.js"></script>
+	<script type="text/javascript" defer src="http://127.0.0.1:8000/assets/vendors/jquery.counterup/jquery.counterup.min.js"></script>
+
+	<!-- EChartJS JavaScript -->
+    <script type="text/javascript" defer src="http://127.0.0.1:8000/assets/vendors/echarts/dist/echarts-en.min.js"></script>
+
+	<!-- Owl JavaScript -->
+    <script type="text/javascript" defer src="http://127.0.0.1:8000/assets/vendors/owl.carousel/dist/owl.carousel.min.js"></script>
+
+	<!-- Toastr JS -->
+    <script type="text/javascript" defer src="http://127.0.0.1:8000/assets/vendors/jquery-toast-plugin/dist/jquery.toast.min.js"></script>
+
+    <!-- Peity JavaScript -->
+    <script type="text/javascript" defer src="http://127.0.0.1:8000/assets/vendors/peity/jquery.peity.min.js"></script>
+
+    <!-- Morris Charts JavaScript -->
+    <script type="text/javascript" defer src="http://127.0.0.1:8000/assets/vendors/raphael/raphael.min.js"></script>
+    <script type="text/javascript" defer src="http://127.0.0.1:8000/assets/vendors/morris.js/morris.min.js"></script>
+
+    <!-- Easy pie chart JS -->
+    <script type="text/javascript" defer src="http://127.0.0.1:8000/assets/vendors/easy-pie-chart/dist/jquery.easypiechart.min.js"></script>
+
+	<!-- Sparkline JavaScript -->
+    <script type="text/javascript" defer src="http://127.0.0.1:8000/assets/vendors/jquery.sparkline/dist/jquery.sparkline.min.js"></script>
+
+    <!-- Init JavaScript -->
+    <script type="text/javascript" defer src="http://127.0.0.1:8000/assets/dist/js/init.js"></script>
+	<script type="text/javascript" defer src="http://127.0.0.1:8000/assets/dist/js/dashboard4-data.js"></script>
+
+    <!--Page JavaScript -->
+    
+
+</body>
+
+</html>

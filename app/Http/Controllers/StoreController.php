@@ -43,14 +43,17 @@ class StoreController extends Controller
             'pincode'    => 'required',
         ]);
 
-        $store = new Store();
+        // $store = new Store();
 
-        $store->store_name = $request->input('store_name');
-        $store->address = $request->input('address');
-        $store->city = $request->input('city');
-        $store->state = $request->input('state');
-        $store->pincode = $request->input('pincode');
-        $store->save();
+        // $store->store_name = $request->input('store_name');
+        // $store->address = $request->input('address');
+        // $store->city = $request->input('city');
+        // $store->state = $request->input('state');
+        // $store->pincode = $request->input('pincode');
+        // $store->save();
+
+        Store::create($request->all());
+
         return redirect()->back()->with('success','Store created successfully');
     }
 
