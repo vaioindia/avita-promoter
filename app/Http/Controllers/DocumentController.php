@@ -50,18 +50,6 @@ class DocumentController extends Controller
              'reference' => $request->reference->move(public_path().'\Documents', $fileName),
          ]);
 
-        //  if($request->hasfile('reference'))
-        //  {
-        //     foreach($request->file('reference') as $fileName)
-        //     {
-        //         $name = time().'.'.$fileName->extension();
-        //         $fileName->move(public_path().'/files/', $fileName);
-        //         $data[] = $fileName;
-        //     }
-        //  }
-
-        // $document = new Document;
-        // $fileName->reference=json_encode($data);
         $document->save();
         $document = DB::table('documents')->orderBy('created_at','desc')->first();
 

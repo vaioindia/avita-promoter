@@ -7,10 +7,7 @@
     <!-- Title -->
 
         {{-- <button type="button" class="btn btn-gradient-success">Punch In</button>
-
-
         <button type="button" class="btn btn-gradient-success float-right">Punch Out</button> --}}
-
 
     <div class="hk-pg-header align-items-top mt-3">
         <div>
